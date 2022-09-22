@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Formulário, Contato">
+    <meta name="description" content="Uma página que simula um Formulário de Contato para entrar em contato com Alan Nataniel">
+    <meta name="author" content="Alan Nataniel">
+    <link rel="stylesheet" href="estilos/styles.css">
+    <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
+    <title>Formulário de Contato</title>
+</head>
+<body>
+    <!-- barra de navegação -->
+    <nav>
+        <ul class="nav">
+            <a href="index.html"><li>Início</li></a>
+            <a href="hobbie_e_interesses.html"><li>Hobbie e Interesses</li></a>
+            <a href="formulario_de_contato.html"><li>Formulário de contato</li></a>
+        </ul>
+    </nav>
+    <!-- formulário de contato -->
+    <section>
+        <h1 class="titulo">Formulário de contato</h1>
+        <div class="form">
+            <form>
+                <fieldset>
+                    <legend style="text-align:right;">Olá mundo!</legend>
+                    <div class="label"><label for="nome"><strong>Nome:</strong></label></div>
+                    <input type="text" id="nome" name="nome" required>
+                    <hr>
+                    <div class="label"><label for="e-mail"><strong>E-mail:</strong></label></div>
+                    <input type="email" id="e-mail" name="e-mail" required>
+                    <hr>
+                    <div class="label"><label for="mensagem"><strong>Mensagem:</strong></label></div>
+                    <textarea id="mensagem" name="mensagem" required></textarea>
+                    <button type="submit" onclick="alert('Olá Mundo!')"><strong>Enviar</strong></button>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
