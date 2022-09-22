@@ -1,3 +1,7 @@
+@charset "UTF-8";
+* {
+    box-sizing: border-box;
+}
 body {
     margin: auto;
     max-width: 900px;
@@ -29,6 +33,9 @@ ul.nav li:hover {
 a {
     color: white;
 }
+a.navlink {
+    text-decoration: none;
+}
 /* body */
 section {
     padding: 20px;
@@ -50,10 +57,24 @@ div.quem {
     display: flex;
     align-items: center;
 }
+div.img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 img {
-    margin: 20px;
+    margin: 0 20px 20px 20px;
     border-radius: 50%;
     box-shadow: 5px 0 black;
+}
+button.linkedin {
+    padding: 10px;
+    border-radius: 15px;
+}
+button.linkedin:hover {
+    color: white;
+    background-color: rgb(50, 50, 150);
+    box-shadow: 2px 2px 2px black;
 }
 h1#quem {
     margin: 0 20px;
@@ -174,7 +195,9 @@ div.label {
     margin-bottom: 7px;
 }
 input, textarea, button {
+    padding: 5px 10px;
     border: none;
+    border-radius: 7px;
     box-shadow: 2px 2px 2px;
 }
 textarea {
@@ -183,7 +206,7 @@ textarea {
     resize: none;
     box-shadow: 5px 5px 5px;
 }
-button {
+button.submit {
     margin-top: 10px;
     padding: 10px;
 }
@@ -192,26 +215,31 @@ button:hover {
 }
 /* Web Design Responsivo para telas pequenas */
 @media only screen and (max-width: 600px) {
-    ul.nav li {
+    ul.nav li { /* muda o menu de navegação da horizontal para vertical */
         display: block;
         text-align: center;
     }
-    div.quem {
+    div.quem { /* muda a div.quem da horizontal para vertical */
         display: block;
         text-align: center;
     }
+    /* desfaz a propriedade text-align do primeiro seletor do @media (ul.nav li) */
+    /* sem essa nova propriedade outras listas eram afetadas pelo seletor (ul.nav li) */
     li {
         text-align: left;
     }
-}
-/* Web Design Responsivo para telas muito pequenas */
-@media only screen and (max-width: 360px) {
-    img {
-        margin: 0%;
-        width: 100%;
+    img { /* ajusta a imagem da página index.html para telas pequenas */
+        margin: 20px;
+        max-width: 100%;
         height: auto;
     }
-    fieldset {
+}
+/* Web Design Responsivo para telas MUITO pequenas */
+@media only screen and (max-width: 360px) {
+    div.form { /* diminui o padding de 20px para 10px */
+        padding: 10px;
+    }
+    fieldset { /* diminui o padding de 50px para 10px */
         padding: 10px;
     }
 }
